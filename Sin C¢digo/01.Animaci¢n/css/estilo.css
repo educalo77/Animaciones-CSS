@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes miAnimacion {
+  /* 0% {
+    left: 0%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  } */
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes miAnimacion {
+  /*se usa @-webkit- como prefijo porque los navegadores desactualizados no compatibilizan con @keyframes*/
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes miAnimacion {
+  /*se usa @-webkit- como prefijo porque los navegadores desactualizados no compatibilizan con @keyframes en este caso para firexo y opera*/
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#fondo1 {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /*no se puede usar 100% porque la position es absolut*/
+  background: url(../img/background4.jpg); /*por defecto background-repeat viene en repeat
+  repeat-x, no-repeat*/
+  animation: miAnimacion 24s linear 18s infinite;
+  -webkit-animation: miAnimacion 24s linear 18s infinite;
+  -moz-animation: miAnimacion 24s linear 18s infinite;
+}
+#fondo2 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/background2.jpg);
+  background-size: cover;
+  /*ajusta la imagen al tamaño del box
+  tambien se usa background-position: center por defecto viene en background-position: left top */
+  animation: miAnimacion 24s linear 12s infinite;
+  -webkit-animation: miAnimacion 24s linear 12s infinite;
+  -moz-animation: miAnimacion 24s linear 12s infinite;
+}
+#fondo3 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/background3.jpg);
+  background-size: cover;
+  animation: miAnimacion 24s linear 6s infinite;
+  -webkit-animation: miAnimacion 24s linear 6s infinite;
+  -moz-animation: miAnimacion 24s linear 6s infinite;
+}
+#fondo4 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/background.jpg);
+  animation: miAnimacion 24s linear 0s infinite;
+  -webkit-animation: miAnimacion 24s linear 0s infinite;
+  -moz-animation: miAnimacion 24s linear 0s infinite;
+  /* cubic-bezier(1, -0.5, 0.5, 1) esta bueno, ease-in-out
+  el tiempo despues de linear o lo que haya ds de los 10s es el tiempo de delay que uno quiere que inicie la animacion */
+}
